@@ -12,6 +12,15 @@ wp.blocks.registerBlockType('neely/custom-block',{
         companyZip: {type:'string'}
     },
     edit: function(props){
+        function updateCompanyName(event){ props.setAttributes({companyName: event.target.value})}
+        function updateCompanyPhone(event){props.setAttributes({companyPhone: event.target.value})}
+        function updateCompanyAddress(event){props.setAttributes({companyAddress: event.target.value})}
+        function updateCompanyAddress2(event){props.setAttributes({companyAddress2: event.target.value})}
+        function updateCompanyCity(event){props.setAttributes({companyCity: event.target.value})}
+        function updateCompanyState(event){props.setAttributes({companyState: event.target.value})}
+        function updateCompanyZip(event){props.setAttributes({companyZip: event.target.value})}
+
+
         return React.createElement("div", null, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", null, "Company Name"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
             type: "text",
             value: props.attributes.companyName,
